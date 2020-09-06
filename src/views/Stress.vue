@@ -1,0 +1,231 @@
+<template>
+<main>
+    <section class="hero-section" :style="{ backgroundImage: 'url(' + require('@/assets/img/anxiety-hero.png') + ')' }">    
+        <header>
+            <HeaderDark/>    
+        </header>
+        <div class="container is-fluid hero-section-inner">
+            <div class="columns">
+                <div class="column">
+                    <h2>The true weight of the flake</h2>
+                    <h1>Anxiety & Stress</h1>
+                    <p>The nemesis of dandruff, along with other skin conditons, is having an unspoken impact on anxiety and stress levels, resulting in major impacts to a sufferer’s quality of life…
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="header__scroll_info">
+            <div class="header__scroll_info_container">
+                <span>Discover</span>
+                <br>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 8"><line class="st0" x1="14" y1="1" x2="7.5" y2="7"></line><line class="st0" x1="1" y1="1" x2="7.5" y2="7"></line></svg>
+            </div>
+        </div>
+    </section>   
+    <section class="info-intro">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-7">
+                    <div class="info-intro-item">
+                        <div class="info-intro-item-group">                            
+                            <img alt="Flaking it" src="../assets/img/group2.png"  class="flakingit">                            
+                            <div class="info-intro-item-copy">
+                                <h5>DANDRUFF INDUCED</h5>
+                                <h4 class="gradient-text">PANIC ATTACKS</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-intro-item">
+                        <div class="info-intro-item-group">                           
+                            <img alt="Flaking it" src="../assets/img/group1.png"  class="flakingit">
+                           <div class="info-intro-item-copy">
+                                <h5>THE FEAR OF THE FLAKES STOPS DANDRUFF SUFFERERS </h5>
+                                <h4 class="gradient-text">FROM BEING ACTIVE</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quotestroke">
+                        <h2 class="stroke-text">"I always have to keep checking for flakes it drives me up the walls with anxiety"</h2>
+                    </div>
+                   
+                </div>
+                <div class="column is-5">
+                    <div class="bluebg">
+                        <h2 class="stroke-text">Flaking out</h2>
+                        <div class="bluebg-content">
+                            <h4><span>Dandruff sufferers socially distance to</span> hide their feelings and try to take back control</h4>
+                            <img alt="Flaking it" src="../assets/img/flaking.png"  class="flakingit">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials inner-testimonials">
+        <div class="container">
+            <div class="expertarea">
+                <img alt="Four Group" src="../assets/img/kristinagorbatenkoroth.png" class="expertimg">
+            </div>
+            <img alt="Dr Alia Ahmed Quote" src="../assets/img/quotes.png"  class="quoteimg">
+            <p id="split-testimonial" class="split-text">
+                We’ve known for a long time that dandruff is a complicated issue for those who suffer from it, and now we can really see that its impacts are more widespread than we originally thought. And although the stressors of anxiety and other mental health issues are widely researched, it is the first time the link between skin diseases, and people’s mental wellbeing have been looked at together, so we are looking forward to educating many more people on this subject.”
+            </p>        
+            <p class="testimonial-author">Dr. Kristina Gorbatenko-Roth</p>
+        </div>
+        <div class="textright">
+            <h3>Anxiety</h3>
+        </div>
+    </section>
+
+    <section class="info-intro">
+        <div class="container">
+            <div class="columns info-items">                
+                 <div class="column">
+                    <p><span class="largetxt">50% loader </span> <br>
+                    of severe and moderate dandruff sufferers strongly/agree that <span> DANDRUFF GETS WORSE WHEN THEY ARE STRESSED</span> 
+                    </p>
+                    <br><br>
+                    <p><span class="largetxt">1 in 2 </span> of dandruff sufferers get sudden  <span> FEELINGS OF PANIC.</span>
+                    </p>
+                </div>
+               
+                <div class="column is-7 info-intro-item bg-item" :style=" { backgroundImage: 'url(' + require('@/assets/img/anxiety-bg.png') + ')' }">
+                    <h4 class="gradient-text">The vicious circle</h4>
+                    <p>Breakthrough study reveals the recurring <span>cycle of stress and dandruff</span>
+                    </p>
+                </div>
+            </div>
+           
+            <div class="columns info-items">
+                <div class="column">
+                    <p><span class="largetxt">50% icon </span> <br>
+                        of people feel restless that they have to be on the move 
+                    </p> 
+                </div>
+                <div class="column"> 
+                    <p><span class="largetxt">3/4 </span> of sufferers worry <span> people stare at their skin disease</span> 
+                    </p>
+                </div>
+                <div class="column"> </div>
+            </div>
+            <div class="columns info-items">
+                <div class="column" style="margin-top:6rem;">
+                    <p><span class="largetxt"> 6 in 10</span> icon
+                    </p>
+                </div>                
+            </div>
+            <div class="columns info-items">
+                <div class="column" style="margin-top:6rem;">
+                    <p>of these people think that others find it<span class="largetxt"> distasteful to touch them</span> due to their skin issue.
+                    </p>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <section class="testimonials inner-testimonials">
+      <div class="container">
+            <div class="expertarea">
+                <img alt="Four Group" src="../assets/img/expert.png" class="expertimg">
+            </div>
+            <img alt="Dr Alia Ahmed Quote" src="../assets/img/quotes.png"  class="quoteimg">
+            <p id="split-testimonial" class="split-text">
+                Sometimes it’s forgotten that the scalp is an organ, and it’s one that is extremely responsive to stress. Once the stress axis is activated the effects can be seen in the scalp (e.g. redness, flaking, itching) and this can exacerbate existing dandruff. The impact of flakes then further stimulates the stress response and the cycle continues. This research proves that stress and anxiety management have a role to play in dandruff treatment and management, which is rarely implemented.”
+            </p>        
+            <p class="testimonial-author">Dr. Alia Ahmed</p>
+        </div>
+        <div class="textright">
+            <h3>Anxiety</h3>
+        </div>
+    </section>
+
+    <section class="info-footer">
+        <div class="container">
+            <div class="columns">
+                 <div class="column is-7 bluebg">
+                    <h3>Head & Shoulders truly understands that it is hard to break the stress cycle and shake the weight of the flakes of stress induced dandruff. 
+                    </h3>
+                    <br>
+                    <h3>So by tackling the root cause of dandruff paired with taking some expert advice from our panel of leading independent experts, you can set your head free.
+                    </h3>
+                </div>
+                <div class="column">
+                    <h2 class="stroke-text">"Led to me suffering depression and anxiety"</h2>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <Footer/>
+</main>
+</template>
+
+<script>
+import HeaderDark from '../components/HeaderDark.vue'
+import Footer from '../components/Footer.vue'
+
+export default {
+  name: 'HowDecoded',
+  components: {
+    HeaderDark,    
+    Footer
+  },
+  props: {
+    msg: String
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+    .info-footer {
+        .columns {
+            align-items: flex-start;
+        }
+        h2 {
+            &.stroke-text {
+                font-size:3.8rem;
+            }
+        }
+    }
+    .info-intro {
+        .info-intro-item-group {
+            h4 {
+                font-size:2.3rem;
+            }
+            h5 {
+                font-size:1.9rem;
+            }
+        }
+        .bluebg {
+            padding: 2rem 1.5rem;
+            h4 {
+                text-transform:none;
+                font-size:2.5rem;
+                span {
+                    text-transform:none;
+                }
+            }
+            h2 {
+                &.stroke-text {
+                    top: 10%;
+                    font-size: 4.5rem;
+                    max-width: 100%;
+                    position: absolute;
+                    transform-origin: top left;
+                    transform: rotate(-90deg) translateX(-100%);
+                }
+            }
+            .bluebg-content {
+                padding-left:6rem;
+                img {
+                    margin-top:1rem;
+                }
+            }
+        }
+    }    
+    .quotestroke {
+        max-width: 90%;
+    }
+
+</style>

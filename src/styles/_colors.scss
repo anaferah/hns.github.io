@@ -1,0 +1,15 @@
+
+$lightblue: #52D2F6;
+$darkblue: #174885;
+$textblue: #1373AE;
+$mediumblue: #0067B1;
+$bluebgdark: #041850;
+$grey:#595B60;
+
+$gradientbg: linear-gradient(90deg, rgba(82,210,246,1) 0%, rgba(23,72,133,1) 100%);
+$gradientxt: linear-gradient(to right, #52D2F6 0%, #42C6F0 10%, #2DB6E8 20%, #19A7DF 30%, #1481BC 40%, #11609B 50%, #0E4680 60%, #0F4C8E 70%, #0E509C 80%, #124090 90%, #174885 100%);
+$gradientxtreversed: linear-gradient(to right, #174885 0%, #124090 10%,  #0E509C 20%,  #0F4C8E 30%, #0E4680 40%, #11609B 50%, #1481BC 60%, #19A7DF 70%,#2DB6E8 80%, #42C6F0 90%, #52D2F6 100%);
+
+.bluebg {
+    background:$bluebgdark;
+}

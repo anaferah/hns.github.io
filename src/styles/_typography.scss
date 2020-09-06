@@ -1,0 +1,227 @@
+
+
+ @font-face {
+  font-family: 'Bambino New Heavy Italic';
+  src: url('~@/assets/fonts/BambinoNew-HeavyItalic.eot');
+  src: url('~@/assets/fonts/BambinoNew-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-HeavyItalic.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-HeavyItalic.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-HeavyItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Regular';
+  src: url('~@/assets/fonts/BambinoNew-Regular.eot');
+  src: url('~@/assets/fonts/BambinoNew-Regular.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-Regular.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-Regular.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Bold';
+  src: url('~@/assets/fonts/BambinoNew-Bold.eot');
+  src: url('~@/assets/fonts/BambinoNew-Bold.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-Bold.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-Bold.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Bold Italic';
+  src: url('~@/assets/fonts/BambinoNew-BoldItalic.eot');
+  src: url('~@/assets/fonts/BambinoNew-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-BoldItalic.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-BoldItalic.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Thin';
+  src: url('~@/assets/fonts/BambinoNew-Thin.eot');
+  src: url('~@/assets/fonts/BambinoNew-Thin.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-Thin.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-Thin.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Light';
+  src: url('~@/assets/fonts/BambinoNew-Light.eot');
+  src: url('~@/assets/fonts/BambinoNew-Light.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-Light.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-Light.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Black';
+  src: url('~@/assets/fonts/BambinoNew-Black.eot');
+  src: url('~@/assets/fonts/BambinoNew-Black.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-Black.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-Black.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Heavy';
+  src: url('~@/assets/fonts/BambinoNew-Heavy.eot');
+  src: url('~@/assets/fonts/BambinoNew-Heavy.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-Heavy.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-Heavy.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Black Italic';
+  src: url('~@/assets/fonts/BambinoNew-BlackItalic.eot');
+  src: url('~@/assets/fonts/BambinoNew-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-BlackItalic.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-BlackItalic.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Regular Italic';
+  src: url('~@/assets/fonts/BambinoNew-RegularItalic.eot');
+  src: url('~@/assets/fonts/BambinoNew-RegularItalic.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-RegularItalic.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-RegularItalic.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Thin Italic';
+  src: url('~@/assets/fonts/BambinoNew-ThinItalic.eot');
+  src: url('~@/assets/fonts/BambinoNew-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-ThinItalic.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-ThinItalic.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Semibold Italic';
+  src: url('~@/assets/fonts/BambinoNew-SemiBoldItalic.eot');
+  src: url('~@/assets/fonts/BambinoNew-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-SemiBoldItalic.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-SemiBoldItalic.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Thin 1';
+  src: url('~@/assets/fonts/BambinoNew-Thin_1.eot');
+  src: url('~@/assets/fonts/BambinoNew-Thin_1.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-Thin_1.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-Thin_1.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-Thin_1.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Semibold';
+  src: url('~@/assets/fonts/BambinoNew-SemiBold.eot');
+  src: url('~@/assets/fonts/BambinoNew-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-SemiBold.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-SemiBold.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Light Italic';
+  src: url('~@/assets/fonts/BambinoNew-LightItalic.eot');
+  src: url('~@/assets/fonts/BambinoNew-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-LightItalic.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-LightItalic.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bambino New Semibold 1';
+  src: url('~@/assets/fonts/BambinoNew-SemiBold_1.eot');
+  src: url('~@/assets/fonts/BambinoNew-SemiBold_1.eot?#iefix') format('embedded-opentype'),
+      url('~@/assets/fonts/BambinoNew-SemiBold_1.woff2') format('woff2'),
+      url('~@/assets/fonts/BambinoNew-SemiBold_1.woff') format('woff'),
+      url('~@/assets/fonts/BambinoNew-SemiBold_1.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+ 
+ 
+$primary-font: 'Bambino New Regular';
+$semibold-font: 'Bambino New Semibold';
+$bold-italic-font: 'Bambino New Bold Italic';
+$bold-font: 'Bambino New Bold';
+$black-font: 'Bambino New Black';
+$light-font: 'Bambino New Light';
+
+
+// Stroke text
+h2 {
+  &.stroke-txt {
+    -webkit-text-stroke: 2px white;
+    -webkit-text-fill-color: transparent;
+    font-size:4.3rem;
+    text-transform: uppercase;
+    line-height:0.8;
+    span {
+      background: linear-gradient(to right, #52D2F6 0%, #42C6F0 10%, #2DB6E8 20%, #19A7DF 30%, #1481BC 40%, #11609B 50%, #0E4680 60%, #0F4C8E 70%, #0E509C 80%, #124090 90%, $darkblue 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;   
+      -webkit-text-stroke: 0;   
+      font-family: $black-font;
+    }
+  }
+}
+
+.stroke-text {
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
+}
