@@ -1,14 +1,14 @@
 <template>
-<main>
+<main class="stigma">
     <section class="hero-section" :style="{ backgroundImage: 'url(' + require('@/assets/img/help-hero.png') + ')' }">    
         <header>
-            <HeaderDark/>    
+            <HeaderLight/>    
         </header>
         <div class="container is-fluid hero-section-inner">
             <div class="columns">
                 <div class="column">
                     <h2>The true weight of the flake</h2>
-                    <h1>Stigma</h1>
+                    <h1 id="split" class="split-text">Stigma</h1>
                     <p>Knowing that people think you are unclean, unattractive and therefore not feeling socially accepted is how dandruff sufferers feel 
                         every single day…
                     </p>
@@ -29,19 +29,21 @@
                 <div class="column is-7">
                     <div class="info-intro-item">
                         <div class="info-intro-item-group">                            
-                            <img alt="Flaking it" src="../assets/img/group2.png"  class="flakingit">                            
+                            <img alt="Flaking it" src="../assets/img/teens-unseen.svg"  class="flakingit">     
                             <div class="info-intro-item-copy">
-                                <h5>The full force of Dandruff Flakes</h5>
-                                <h4 class="gradient-text">Difficulty of Dandruff as a teen carried through life</h4>
+                                <h5 id="split" class="split-text">The Unseen Symptoms of Dandruff</h5>                     
+                                <h4 class="gradient-text">Helpless<br> Useless<br> Unattractive</h4>
                             </div>
                         </div>
                     </div>
                     <div class="info-intro-item">
                         <div class="info-intro-item-group">                           
-                            <img alt="Flaking it" src="../assets/img/group1.png"  class="flakingit">
+                            <img alt="Flaking it" src="../assets/img/teens-blocker.svg"  class="flakingit">
                            <div class="info-intro-item-copy">
-                                <h5>The Danger of Dandruff</h5>
-                                <h4 class="gradient-text">Bullying and Victimization</h4>
+                               <h4 class="gradient-text">Bullying and Victimization</h4>
+                                <h5 id="split" class="split-text">how dandruff id the unwanted third person</h5>
+                                <h4 class="gradient-text">in your relationship?</h4>
+                                
                             </div>
                         </div>
                     </div>
@@ -129,24 +131,149 @@
 </template>
 
 <script>
-import HeaderDark from '../components/HeaderDark.vue'
+import HeaderLight from '../components/HeaderLight.vue'
 import Footer from '../components/Footer.vue'
 
+import { gsap } from "gsap";
+import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CustomEase } from "gsap/CustomEase";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(ScrollTrigger, CustomEase, DrawSVGPlugin, SplitText, ExpoScaleEase, RoughEase, SlowMo);
+
 export default {
-  name: 'HowDecoded',
+  name: 'Stigma',
   components: {
-    HeaderDark,  
+    HeaderLight,  
     Footer  
   },
   props: {
     msg: String
-  }
+  },
+
+mounted() { 
+
+    gsap.utils.toArray(".cell").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top center',
+            end: "bottom center",
+            scrub: true,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "play none none none",
+            markers:true
+            },            
+        })
+        .from(".figure span", {duration: 2,  ease:"none",  innerHTML:"0", roundProps:"innerHTML", }, "<");
+        });
+
+       
+
+    gsap.utils.toArray("#progressbar").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 70%',
+            scrub: 3,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            },
+             snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: 13, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 12, // wait 0.2 seconds from the last scroll event before doing the snapping
+                ease: "power2.inOut" // the ease of the snap animation ("power3" by default)
+            }
+        })
+        .to(elem, 2, {value: 50, ease: "power2.easeInOut"})
+        });
+      
+       
+
+        
+      gsap.utils.toArray(".flakingit").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 55%',
+            scrub: 3,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            },
+            snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: 13, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 2, // wait 0.2 seconds from the last scroll event before doing the snapping
+                ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+            }         
+        })
+        .from(elem, {scale: 0.1, rotation:45, opacity: 0, autoAlpha:0})
+        });
+
+
+       gsap.utils.toArray(".topsvg").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 55%',
+            scrub: 3,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            },
+             snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: 13, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 12, // wait 0.2 seconds from the last scroll event before doing the snapping
+                ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+            }
+        })
+        .from(elem, {scale: 0.3, rotation:365, opacity: 0})
+        });
+
+        
+    gsap.utils.toArray("#split").forEach(function(elem) {
+        const splitTimeline = gsap.timeline({scrollTrigger: {
+            trigger: elem,
+            start: "top 80%",
+            end: "bottom 10%",
+            onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            }
+        });
+
+        const splitTitle = new SplitText(elem);
+            splitTimeline.from(splitTitle.chars, {duration: 2.5, opacity: 0, y: 0, stagger: {amount: 1}, ease: "back.out(1)", overwrite: "auto"});
+        });
+
+        gsap.utils.toArray("#split-testimonial").forEach(function(elem) {
+        const splitTimeline = gsap.timeline({scrollTrigger: {
+            trigger: elem,
+            start: "top 80%",
+            end: "bottom 10%",
+            onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            }
+        });
+
+        const splitTitle = new SplitText(elem, {type:"words"});
+            splitTimeline.from(splitTitle.words, {duration: 2.5, opacity: 0, y: 0, stagger: {amount: 1}, ease: "back.out(1)", overwrite: "auto"});
+        });
+    
+    // }
+}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-    .hero-section {
+<style  lang="scss">
+.stigma {
+     .hero-section {
         background-position: right center;
         .hero-section-inner {
             p {
@@ -156,7 +283,14 @@ export default {
     }
     .info-intro {
         .info-intro-item {
-                      
+            // .info-intro-item-group {
+            //     display:flex;
+            //     align-items:center;
+            //     justify-content:center;
+            //     .info-intro-item-copy {
+
+            //     }
+            // }    
         }
         .bluebg {
             padding:3rem 5rem;
@@ -171,4 +305,7 @@ export default {
             }
         }  
     }
+}
+
+   
 </style>

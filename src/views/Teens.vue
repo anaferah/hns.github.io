@@ -28,8 +28,8 @@
             <div class="columns">
                 <div class="column is-7">
                     <div class="info-intro-item">
-                        <div class="info-intro-item-group">                            
-                            <img alt="Flaking it" src="../assets/img/group2.png"  class="flakingit">                            
+                        <div class="info-intro-item-group">   
+                            <img alt="Flaking it" src="../assets/img/teens-fullforcen.svg"  class="topsvg">
                             <div class="info-intro-item-copy">
                                 <h5 id="split" class="split-text">The full force of Dandruff Flakes</h5>
                                 <h4 class="gradient-text">Difficulty of Dandruff as a teen carried through life</h4>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="info-intro-item">
                         <div class="info-intro-item-group">                           
-                            <img alt="Flaking it" src="../assets/img/group1.png"  class="flakingit">
+                            <img alt="Flaking it" src="../assets/img/teens-danger.svg"  class="topsvg">
                            <div class="info-intro-item-copy">
                                 <h5 id="split" class="split-text">The Danger of Dandruff</h5>
                                 <h4 class="gradient-text">Bullying and Victimization</h4>
@@ -69,6 +69,7 @@
                     <p><span class="largetxt">1 in 2 </span> teens say they experienced an itchy, sore or painful scalp and have therefor <span> Changed or worn different clothes</span> because of their scalp.
                     </p>
                 </div>
+                <div class="column is-1 icon-middle"><img alt="Four Group" src="../assets/img/teens-change.svg"></div>
                 <div class="column">
                     <p>Teen sufferers are <span class="largetxt">TWICE</span> as likely to struggle with <span>PERCEPTIONS OF THEIR QUALITY OF LIFE, HAPPINESS AND SELF-CONFIDENCE</span> and are less able to manage stress levels and maintain positive attitudes.
                     </p>
@@ -76,19 +77,24 @@
             </div>
             <div class="columns info-items four-col">
                 <div class="column" style="margin-top:6rem;">
-                    <p>Teens with dandruff experience a significantly higher frequency of bullying and victimization with them being teased, called names in a hurtful way or have felt left out of a group or ignored on purpose at least once a month.
+                    <p class="sm-txt">Teens with dandruff experience a significantly higher frequency of bullying and victimization with them being teased, called names in a hurtful way or have felt left out of a group or ignored on purpose at least once a month.
                     </p>
                 </div>
                 <div class="column" style="margin-top:6rem;">
-                    <img alt="Four Group" src="../assets/img/fourten.png">
+                    <div class="img-group-anim">
+                        <img alt="Four Group" src="../assets/img/fourten-one.png" class="four-col-img">
+                        <img alt="Four Group" src="../assets/img/fourten-two.png" class="four-col-img-two">
+                        <img alt="Four Group" src="../assets/img/fourten-three.png" class="four-col-img-three">
+                        <img alt="Four Group" src="../assets/img/fourten-four.png" class="four-col-img-four">
+                    </div>
                     <p><span class="largetxt">4 in 10</span> of these people were <span>LEFT OUT OF GROUPS</span> when they were a teen. </p>
                 </div>
                 <div class="column">
-                    <img alt="Four Group" src="../assets/img/halfchat.png">
+                    <img alt="Four Group" src="../assets/img/halfchat.png" class="four-col-img-two">
                     <p><span class="largetxt">HALF</span> (49%) of adult dandruff sufferers were <span>PICKED</span> ON when they were a teen</p>
                 </div>
                 <div class="column">
-                    <img alt="Four Group" src="../assets/img/twothree.png">
+                    <img alt="Four Group" src="../assets/img/twothree.png" class="four-col-img-two">
                     <p><span class="largetxt">2/3</span> of adult sufferers believe that dandruff as a teen has led to a <span>LIFELONG IMPACT</span>
                     </p>
                 </div>
@@ -136,12 +142,14 @@ import { gsap } from "gsap";
 import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CustomEase } from "gsap/CustomEase";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(ScrollTrigger, CustomEase, SplitText, ExpoScaleEase, RoughEase, SlowMo);
+gsap.registerPlugin(ScrollTrigger, CustomEase, DrawSVGPlugin, SplitText, ExpoScaleEase, RoughEase, SlowMo);
+
 
 export default {
-  name: 'HowDecoded',
+  name: 'Teens',
   components: {
     HeaderLight,    
     Footer
@@ -150,6 +158,48 @@ export default {
     msg: String
   },
   mounted() { 
+      
+      gsap.utils.toArray(".flakingit").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 55%',
+            scrub: 3,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: 13, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 2, // wait 0.2 seconds from the last scroll event before doing the snapping
+                ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+            }
+            },
+        })
+        .from(elem, {scale: 0.1, rotation:45, opacity: 0, autoAlpha:0})
+        });
+
+
+       gsap.utils.toArray(".topsvg").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 55%',
+            scrub: 3,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            },
+             snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: 13, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 12, // wait 0.2 seconds from the last scroll event before doing the snapping
+                ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+            }
+        })
+        .from(elem, {scale: 0.3, rotation:365, opacity: 0})
+        });
+
      gsap.utils.toArray(".item__title").forEach((elem) => {
         gsap.timeline({
             scrollTrigger: {
@@ -173,6 +223,43 @@ export default {
         })
         .from(elem, {opacity: 0, duration:2, ease:'power3.inOut'})
         });
+
+    gsap.utils.toArray(".four-col-img").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 35%',
+            scrub: 3
+            },
+        })
+        .from(elem, 2, {opacity:0, delay:2, duration:2, ease:'power3.inOut'})
+        });
+
+        gsap.utils.toArray(".four-col-img-three, .four-col-img-four").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 35%',
+            scrub: 3,
+            },
+        })
+        .from(elem, 4, {opacity:0, delay:8, duration:4, ease:'power3.inOut'})
+        });
+
+        gsap.utils.toArray(".four-col-img-two").forEach((elem) => {
+            gsap.timeline({
+                scrollTrigger: {
+                trigger: elem,
+                start: 'top 80%',
+                end: 'top 35%',
+                scrub: 3
+                },
+            })
+        .from(elem, 12, {opacity:0, delay:12, duration:12, ease:'power3.inOut'})
+        });
+
 
     gsap.utils.toArray(".lt").forEach((elem) => {
         gsap.timeline({
@@ -232,7 +319,29 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style  lang="scss">    
+<style lang="scss">    
+    .hero-section {
+        .hero-section-inner  {
+            p {
+                max-width:40%;
+            }
+        }        
+    }
+    .teens {
+        .hero-section {
+             nav {
+                &.main-nav {
+                    ul {               
+                        li {                   
+                            a {
+                                color:$textblue;                       
+                            }
+                        }
+                    }
+                }    
+            }
+        }
+    }
     
-    
+
 </style>

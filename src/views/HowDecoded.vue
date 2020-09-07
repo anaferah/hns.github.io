@@ -35,12 +35,33 @@
           <div class="column" style="padding-left:5rem;">
             <p>The research study, of over <br><span>10,000 Consumers (Aged 13-65) in the US and UK</span> <br>was built and analysed in collaboration with leading psychologist, <strong>Dr. Kristina Gorbatenko-Roth</strong> from the University of Wisconsin-Stout, who has a special interest in psychodermatology, with further insights provided by <strong>Dr Alia Ahmed</strong>, consultant dermatologist from the dermatology clinic, Eudelo, and part of the psychodermatology team at the Royal Hospital of London.
             </p>
-            <p>The survey was built using and accredited medical psychological questioning techniques which are recognised by global medical industry bodies to ensure reliability across different countries and consistency for future research in additional countries. 
+            <p>The survey was built using and accredited medical psychological questioning techniques* which are recognised by global medical industry bodies to ensure reliability across different countries and consistency for future research in additional countries. 
             </p>
             <div class="howdeded-intro-demo">
               <img alt="Case Study 2" src="../assets/img/kristinagorbatenkoroth.png">
               <img alt="Case Study 1" src="../assets/img/expert.png">
             </div>
+            <div class="smallt">
+              'The following psychological questioning techniques and measures were used:
+              <div class="list-section">
+              <ul>
+                <li>DLQI, Adult Dermatology Life Quality Index</li>
+                <li>CDLQI, Children’s Dermatology Life Quality Index</li>
+                <li>SKINDEX-16, Impact of skin condition symptoms on life quality</li>
+                <li>SKINDEX Teen</li>
+                <li>HADS, Hospital Anxiety and Depression Scale</li>
+                <li>CBVS, California Bullying Victimization Scale</li>               
+              </ul>
+              <ul>                
+                <li>FNE, Fear of Negative Evaluation Scale</li>
+                <li>CARVAL, Centre for Appearance Research Valence Scale</li>
+                <li>LOT-R, Revised Life Orientation Test</li>
+                <li>RSES, Rosenberg Self Esteem Scale </li>
+                <li>6-STIGMA</li>
+                <li>FQOL, Farage Quality of Life'</li>
+              </ul>
+              </div>
+           </div>
 
           </div>
         </div>
@@ -249,6 +270,20 @@ export default {
       font-family:$black-font;
       -webkit-text-stroke: 2px $lightblue;
       -webkit-text-fill-color: transparent;
+    }
+  }
+  .smallt {
+    margin-top:1.5rem;
+    font-size:13px;
+    .list-section {
+      display:flex;
+      margin-top: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+    ul {
+      list-style: circle;
+      padding-left: 2rem;
     }
   }
 </style>

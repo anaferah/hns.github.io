@@ -1,14 +1,14 @@
 <template>
-<main>
+<main class="stress">
     <section class="hero-section" :style="{ backgroundImage: 'url(' + require('@/assets/img/anxiety-hero.png') + ')' }">    
         <header>
-            <HeaderDark/>    
+            <HeaderLight/>    
         </header>
         <div class="container is-fluid hero-section-inner">
             <div class="columns">
                 <div class="column">
                     <h2>The true weight of the flake</h2>
-                    <h1>Anxiety & Stress</h1>
+                    <h1 id="split" class="split-text">Anxiety & Stress</h1>
                     <p>The nemesis of dandruff, along with other skin conditons, is having an unspoken impact on anxiety and stress levels, resulting in major impacts to a sufferer’s quality of life…
                     </p>
                 </div>
@@ -28,24 +28,24 @@
                 <div class="column is-7">
                     <div class="info-intro-item">
                         <div class="info-intro-item-group">                            
-                            <img alt="Flaking it" src="../assets/img/group2.png"  class="flakingit">                            
+                            <img alt="Flaking it" src="../assets/img/teens-dandruff.svg"  class="flakingit">                            
                             <div class="info-intro-item-copy">
-                                <h5>DANDRUFF INDUCED</h5>
+                                <h5 id="split" class="split-text">DANDRUFF INDUCED</h5>
                                 <h4 class="gradient-text">PANIC ATTACKS</h4>
                             </div>
                         </div>
                     </div>
                     <div class="info-intro-item">
                         <div class="info-intro-item-group">                           
-                            <img alt="Flaking it" src="../assets/img/group1.png"  class="flakingit">
+                            <img alt="Flaking it" src="../assets/img/teens-active.svg"  class="flakingit">
                            <div class="info-intro-item-copy">
-                                <h5>THE FEAR OF THE FLAKES STOPS DANDRUFF SUFFERERS </h5>
+                                <h5 id="split" class="split-text">THE FEAR OF THE FLAKES STOPS DANDRUFF SUFFERERS </h5>
                                 <h4 class="gradient-text">FROM BEING ACTIVE</h4>
                             </div>
                         </div>
                     </div>
                     <div class="quotestroke">
-                        <h2 class="stroke-text">"I always have to keep checking for flakes it drives me up the walls with anxiety"</h2>
+                        <h2 class="stroke-text split-text" id="split">"I always have to keep checking for flakes it drives me up the walls with anxiety"</h2>
                     </div>
                    
                 </div>
@@ -54,7 +54,7 @@
                         <h2 class="stroke-text">Flaking out</h2>
                         <div class="bluebg-content">
                             <h4><span>Dandruff sufferers socially distance to</span> hide their feelings and try to take back control</h4>
-                            <img alt="Flaking it" src="../assets/img/flaking.png"  class="flakingit">
+                            <img alt="Flaking it" src="../assets/img/flaking3.svg"  class="flakingit">
                         </div>
 
                     </div>
@@ -82,16 +82,24 @@
     <section class="info-intro">
         <div class="container">
             <div class="columns info-items">                
-                 <div class="column">
-                    <p><span class="largetxt">50% loader </span> <br>
+                 <div class="column ">
+                    <p><span class="cell figure"><span class="largetxt">50</span></span>
+                    <span class="largetxt">% <progress id="progressbar"  value="0" max="100"></progress> <br></span>
+                                  
                     of severe and moderate dandruff sufferers strongly/agree that <span> DANDRUFF GETS WORSE WHEN THEY ARE STRESSED</span> 
                     </p>
                     <br><br>
-                    <p><span class="largetxt">1 in 2 </span> of dandruff sufferers get sudden  <span> FEELINGS OF PANIC.</span>
-                    </p>
+                    <div class="info-items-right">
+                        <div class="info-items-right-content">
+                            <p><span class="largetxt">1 in 2 </span> of dandruff sufferers get sudden  <span> FEELINGS OF PANIC.</span>
+                            </p>
+                        </div>
+                        <img alt="Arrow Up" src="../assets/img/group3.png" >
+                    </div>
                 </div>
                
                 <div class="column is-7 info-intro-item bg-item" :style=" { backgroundImage: 'url(' + require('@/assets/img/anxiety-bg.png') + ')' }">
+                    <img alt="Arrow Up" src="../assets/img/arrow-circle.svg" >
                     <h4 class="gradient-text">The vicious circle</h4>
                     <p>Breakthrough study reveals the recurring <span>cycle of stress and dandruff</span>
                     </p>
@@ -99,10 +107,19 @@
             </div>
            
             <div class="columns info-items">
-                <div class="column">
-                    <p><span class="largetxt">50% icon </span> <br>
+                <div class="column info-items-left">
+                    <img alt="Arrow Up" src="../assets/img/arrow-up-icon.svg" >
+                    <div class="info-items-left-content">
+                    <p>
+                        <span class="cell figure">
+                        <span class="largetxt">50
+                        </span>
+                        </span>
+                        <span class="largetxt">%</span>                        
+                        <br>
                         of people feel restless that they have to be on the move 
                     </p> 
+                    </div>
                 </div>
                 <div class="column"> 
                     <p><span class="largetxt">3/4 </span> of sufferers worry <span> people stare at their skin disease</span> 
@@ -111,13 +128,9 @@
                 <div class="column"> </div>
             </div>
             <div class="columns info-items">
-                <div class="column" style="margin-top:6rem;">
-                    <p><span class="largetxt"> 6 in 10</span> icon
+                <div class="column">
+                    <p><span class="largetxt"> 6 in </span><span class="cell figure"><span class="largetxt"> 10</span></span> <img alt="Six in Ten" src="../assets/img/sixten2.png" class="smimg">
                     </p>
-                </div>                
-            </div>
-            <div class="columns info-items">
-                <div class="column" style="margin-top:6rem;">
                     <p>of these people think that others find it<span class="largetxt"> distasteful to touch them</span> due to their skin issue.
                     </p>
                 </div>                
@@ -161,23 +174,170 @@
 </template>
 
 <script>
-import HeaderDark from '../components/HeaderDark.vue'
+import HeaderLight from '../components/HeaderLight.vue'
 import Footer from '../components/Footer.vue'
 
+import { gsap } from "gsap";
+import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CustomEase } from "gsap/CustomEase";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(ScrollTrigger, CustomEase, DrawSVGPlugin, SplitText, ExpoScaleEase, RoughEase, SlowMo);
+
 export default {
-  name: 'HowDecoded',
+  name: 'Stress',
   components: {
-    HeaderDark,    
+    HeaderLight,    
     Footer
   },
   props: {
     msg: String
-  }
+  },
+mounted() { 
+
+    gsap.utils.toArray(".cell").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top center',
+            end: "bottom center",
+            scrub: true,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "play none none none",
+            markers:true
+            },            
+        })
+        .from(".figure span", {duration: 2,  ease:"none",  innerHTML:"0", roundProps:"innerHTML", }, "<");
+        });
+
+       
+
+    gsap.utils.toArray("#progressbar").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 70%',
+            scrub: 3,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            },
+             snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: 13, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 12, // wait 0.2 seconds from the last scroll event before doing the snapping
+                ease: "power2.inOut" // the ease of the snap animation ("power3" by default)
+            }
+        })
+        .to(elem, 2, {value: 50, ease: "power2.easeInOut"})
+        });
+      
+       
+
+        
+      gsap.utils.toArray(".flakingit").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 55%',
+            scrub: 3,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            },
+            snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: 13, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 2, // wait 0.2 seconds from the last scroll event before doing the snapping
+                ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+            }         
+        })
+        .from(elem, {scale: 0.1, rotation:45, opacity: 0, autoAlpha:0})
+        });
+
+
+       gsap.utils.toArray(".topsvg").forEach((elem) => {
+        gsap.timeline({
+            scrollTrigger: {
+            trigger: elem,
+            start: 'top 80%',
+            end: 'top 55%',
+            scrub: 3,
+            // onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            },
+             snap: {
+                snapTo: "labels", // snap to the closest label in the timeline
+                duration: 13, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+                delay: 12, // wait 0.2 seconds from the last scroll event before doing the snapping
+                ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
+            }
+        })
+        .from(elem, {scale: 0.3, rotation:365, opacity: 0})
+        });
+
+        
+    gsap.utils.toArray("#split").forEach(function(elem) {
+        const splitTimeline = gsap.timeline({scrollTrigger: {
+            trigger: elem,
+            start: "top 80%",
+            end: "bottom 10%",
+            onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            }
+        });
+
+        const splitTitle = new SplitText(elem);
+            splitTimeline.from(splitTitle.chars, {duration: 2.5, opacity: 0, y: 0, stagger: {amount: 1}, ease: "back.out(1)", overwrite: "auto"});
+        });
+
+        gsap.utils.toArray("#split-testimonial").forEach(function(elem) {
+        const splitTimeline = gsap.timeline({scrollTrigger: {
+            trigger: elem,
+            start: "top 80%",
+            end: "bottom 10%",
+            onToggle: self => gsap.to(elem, {opacity: self.isActive ? 1 : 0}),
+            toggleActions: "restart none none none",
+            }
+        });
+
+        const splitTitle = new SplitText(elem, {type:"words"});
+            splitTimeline.from(splitTitle.words, {duration: 2.5, opacity: 0, y: 0, stagger: {amount: 1}, ease: "back.out(1)", overwrite: "auto"});
+        });
+    
+    // }
+}
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+.stress {    
+        header {
+            nav {
+                &.main-nav {
+                ul {
+                    li {
+                    a {
+                        color:$mediumblue;
+                    }
+                    }
+                }
+                }
+            }
+        }
+    }
+
+    .hero-section {
+        background-position: left center;
+        .hero-section-inner {
+            p {
+                max-width:40%;
+            }
+        }        
+    }
     .info-footer {
         .columns {
             align-items: flex-start;
@@ -223,9 +383,51 @@ export default {
                 }
             }
         }
+        .bg-item {
+            position:relative;
+            img {
+                right: 60%;
+                top: 3%;
+                position: absolute;
+                max-height: 200px;
+                left: 0;
+            }
+            h4 {
+                margin: 40px;
+                max-width: 100%;
+            }
+            p {
+                margin-top: 130px;
+            }
+        }
     }    
     .quotestroke {
         max-width: 90%;
+    }
+
+    .smimg {
+        margin-left: 1.5rem;
+        max-width: 85%;
+    }
+
+    .info-items {
+        margin:2rem 0;
+        .info-items-left {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img {
+                margin-right:1rem;
+            }
+        }
+        .info-items-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img {
+               
+            }
+        }
     }
 
 </style>
